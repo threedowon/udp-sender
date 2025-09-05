@@ -2,7 +2,7 @@
 
 UDP 멀티 전송을 위한 Windows Forms 애플리케이션입니다. 하나의 메시지를 여러 포트로 동시에 전송하고 수신 상태를 모니터링할 수 있습니다.
 
-![메인 화면](udpmultisender/images/main.png)
+![메인 화면](UDPMultiSender/images/main.png)
 
 
 ## 🚀 주요 기능
@@ -117,5 +117,4 @@ UDPMultiSender/
 
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
 
----
 ⭐ 이 프로젝트가 도움이 되었다면 스타를 눌러주세요!
