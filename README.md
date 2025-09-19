@@ -1,117 +1,123 @@
+[한국어 문서 보기](README_KR.md)
+
 # UDP Multi-Sender
 
-UDP 멀티 전송을 위한 Windows Forms 애플리케이션입니다.
-메시지를 여러 포트로 동시에 전송하고 수신 상태를 모니터링할 수 있습니다.
+A Windows Forms application for **UDP multi-sending**.  
+It allows sending messages to multiple ports simultaneously and monitoring their receiving status.
 
 <img width="795" height="477" alt="Image" src="https://github.com/user-attachments/assets/dd0474f3-a342-4c02-8140-d3d36af927ca" />
 
+## 🚀 Features
 
-## 🚀 주요 기능
+- **Multi-port sending**: Send a single message to multiple ports at once
+- **Port range support**: Supports individual ports (e.g., `7777`) or port ranges (e.g., `7777-7780`)
+- **Real-time logging**: Monitor send/receive status in real time
+- **Receive check**: Track receiving status for each port
+- **Test data**: Automatically generate and send JSON test data
+- **Local IP detection**: Auto-detect your local IP address with the **My IP** button
 
-- **다중 포트 전송**: 하나의 메시지를 여러 포트로 동시 전송
-- **포트 범위 지원**: 개별 포트 (7777) 또는 포트 범위 (7777-7780) 설정 가능
-- **실시간 로그**: 전송/수신 상태를 실시간으로 모니터링
-- **수신 확인**: 각 포트별 수신 상태 추적
-- **테스트 데이터**: JSON 형식의 테스트 데이터 자동 생성 및 전송
-- **로컬 IP 자동 감지**: 내 IP 버튼으로 로컬 IP 주소 자동 설정
-
-## 📋 시스템 요구사항
+## 📋 System Requirements
 
 - Windows 10/11
 - .NET 6.0 Runtime
-- Visual Studio 2022 (개발용)
+- Visual Studio 2022 (for development)
 
-## 🛠️ 설치 및 실행
+## 🛠️ Installation & Run
 
-### 1. 소스코드에서 빌드
+### 1. Build from source
 
 ```bash
-# 저장소 클론
+# Clone repository
 git clone https://github.com/threedowon/UDPMultiSender.git
 cd UDPMultiSender
 
-# 프로젝트 빌드
+# Build project
 dotnet build
 
-# 실행
+# Run
 dotnet run
-```
+📖 Usage
+1. Server connection setup
+Server IP: Enter the target server IP address (default: 127.0.0.1)
 
-## 📖 사용법
+Ports: Enter the ports to send to
 
-### 1. 서버 연결 설정
+Single ports: 7777, 7778, 7779
 
-1. **서버 IP**: 대상 서버의 IP 주소 입력 (기본값: 127.0.0.1)
-2. **포트**: 전송할 포트들을 입력
-   - 개별 포트: `7777, 7778, 7779`
-   - 포트 범위: `7777-7780` (7777부터 7780까지)
-   - 혼합: `7777, 7778-7780, 8000`
-3. **내 IP** 버튼: 로컬 IP 주소 자동 설정
-4. **연결** 버튼: 서버에 연결
+Port range: 7777-7780 (from 7777 to 7780)
 
-### 2. 메시지 전송
+Mixed: 7777, 7778-7780, 8000
 
-1. **메시지 입력**: 전송할 메시지를 텍스트 박스에 입력
-2. **전송** 버튼: 모든 포트로 메시지 전송
-3. **테스트 데이터** 버튼: JSON 형식의 테스트 데이터 전송
-4. **Enter 키**: 메시지 입력 후 Enter로 빠른 전송
+My IP button: Auto-detect local IP address
 
-### 3. 로그 모니터링
+Connect button: Connect to server
 
-- **실시간 로그**: 전송/수신 상태를 실시간으로 확인
-- **수신 확인**: 각 포트별 수신 상태 표시
-- **로그 지우기**: 로그 내용 초기화
+2. Message sending
+Message input: Enter the message to send in the text box
 
+Send button: Send the message to all specified ports
 
-## 📊 테스트 데이터 형식
+Test Data button: Send JSON-formatted test data
 
-테스트 데이터는 다음과 같은 JSON 형식으로 전송됩니다:
+Enter key: Press Enter to quickly send the message
 
-```json
+3. Log monitoring
+Real-time log: Monitor send/receive status in real time
+
+Receive check: Show receiving status per port
+
+Clear log: Clear all log entries
+
+📊 Test Data Format
+The test data is sent in JSON format:
+
+json
+코드 복사
 {
   "type": "test",
   "timestamp": "2024-01-15 14:30:25.123",
-  "message": "UDP 테스트 데이터",
+  "message": "UDP test data",
   "randomValue": 456
 }
-```
-
-## 🏗️ 프로젝트 구조
-
-```
+🏗️ Project Structure
+bash
+코드 복사
 UDPMultiSender/
-├── MainForm.cs              # 메인 폼 로직
-├── MainForm.Designer.cs     # UI 디자인
-├── Program.cs               # 애플리케이션 진입점
-├── UDPTestApp.csproj        # 프로젝트 파일
-├── app.ico                  # 애플리케이션 아이콘
-└── README.md               # 프로젝트 문서
-```
+├── MainForm.cs              # Main form logic
+├── MainForm.Designer.cs     # UI design
+├── Program.cs               # Application entry point
+├── UDPTestApp.csproj        # Project file
+├── app.ico                  # Application icon
+└── README.md                # Project documentation
+🛡️ Security Considerations
+UDP is a connectionless protocol, so delivery is not guaranteed
 
-## 🛡️ 보안 고려사항
+Firewall settings may restrict port access
 
-- UDP는 비연결형 프로토콜이므로 전송 보장이 되지 않습니다
-- 방화벽 설정에 따라 포트 접근이 제한될 수 있습니다
-- 네트워크 보안 정책을 확인하고 사용하세요
+Check your network security policy before use
 
-## 🐛 문제 해결
+🐛 Troubleshooting
+Connection failed
+Verify server IP and ports
 
-### 연결 실패
-- 서버 IP와 포트가 올바른지 확인
-- 방화벽 설정 확인
-- 네트워크 연결 상태 확인
+Check firewall settings
 
-### 수신 확인 안됨
-- 대상 서버가 UDP 수신 대기 중인지 확인
-- 포트 번호가 올바른지 확인
-- 네트워크 지연 시간 고려
+Ensure network connectivity
 
-### 빌드 오류
-- .NET 6.0 SDK가 설치되어 있는지 확인
-- 프로젝트 파일이 손상되지 않았는지 확인
+No receive confirmation
+Ensure target server is listening for UDP packets
 
-## 📝 라이선스
+Check if the port numbers are correct
 
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
+Consider potential network latency
 
-⭐ 이 프로젝트가 도움이 되었다면 스타를 눌러주세요!
+Build error
+Verify that .NET 6.0 SDK is installed
+
+Check for corrupted project files
+
+📝 License
+This project is distributed under the MIT License.
+See the LICENSE file for details.
+
+⭐ If this project was helpful, please give it a star!
