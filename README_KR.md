@@ -79,18 +79,6 @@ dotnet run
 }
 ```
 
-## 🏗️ 프로젝트 구조
-
-```
-UDPMultiSender/
-├── MainForm.cs              # 메인 폼 로직
-├── MainForm.Designer.cs     # UI 디자인
-├── Program.cs               # 애플리케이션 진입점
-├── UDPTestApp.csproj        # 프로젝트 파일
-├── app.ico                  # 애플리케이션 아이콘
-└── README.md               # 프로젝트 문서
-```
-
 ## 🛡️ 보안 고려사항
 
 - UDP는 비연결형 프로토콜이므로 전송 보장이 되지 않습니다
