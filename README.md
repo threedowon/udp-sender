@@ -36,3 +36,42 @@ dotnet build
 
 # Run
 dotnet run
+
+📖 Usage
+1. Server connection setup
+
+Server IP: Enter the target server IP address (default: 127.0.0.1)
+
+Ports: Enter the ports to send to
+
+Single ports: 7777, 7778, 7779
+
+Port range: 7777-7780 (from 7777 to 7780)
+
+Mixed: 7777, 7778-7780, 8000
+
+My IP button: Auto-detect local IP address
+
+Connect button: Connect to server
+
+2. Message sending
+
+Message input: Enter the message to send in the text box
+
+Send button: Send the message to all specified ports
+
+Test Data button: Send JSON-formatted test data
+
+Enter key: Press Enter to quickly send the message
+
+3. Log monitoring
+
+Real-time log: Monitor send/receive status in real time
+
+Receive check: Show receiving status per port
+
+Clear log: Clear all log entries
+
+📊 Test Data Format
+
+The test data is sent in JSON format:
