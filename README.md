@@ -72,12 +72,12 @@ The test data is sent in JSON format:
 
 ## 🏗️ Project Structure
 UDPMultiSender/
-├── MainForm.cs # Main form logic
-├── MainForm.Designer.cs # UI design
-├── Program.cs # Application entry point
-├── UDPTestApp.csproj # Project file
-├── app.ico # Application icon
-└── README.md # Project documentation
+├── MainForm.cs              # Main form logic
+├── MainForm.Designer.cs     # UI design
+├── Program.cs               # Application entry point
+├── UDPTestApp.csproj        # Project file
+├── app.ico                  # Application icon
+└── README.md                # Project documentation
 
 ## 🛡️ Security Considerations
 
