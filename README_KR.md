@@ -2,7 +2,7 @@
 
 UDP 멀티 전송을 위한 Windows Forms 애플리케이션입니다. 하나의 메시지를 여러 포트로 동시에 전송하고 수신 상태를 모니터링할 수 있습니다.
 
-![메인 화면](images/main.png)
+<img width="795" height="477" alt="Image" src="https://github.com/user-attachments/assets/dd0474f3-a342-4c02-8140-d3d36af927ca" />
 
 
 ## 🚀 주요 기능
