@@ -56,7 +56,6 @@ dotnet build
 - **Receive check**: Show receiving status per port  
 - **Clear log**: Clear all log entries  
 
----
 
 ## 📊 Test Data Format
 
@@ -70,3 +69,42 @@ The test data is sent in JSON format:
   "randomValue": 456
 }
 ```
+
+## 🏗️ Project Structure
+UDPMultiSender/
+├── MainForm.cs # Main form logic
+├── MainForm.Designer.cs # UI design
+├── Program.cs # Application entry point
+├── UDPTestApp.csproj # Project file
+├── app.ico # Application icon
+└── README.md # Project documentation
+
+## 🛡️ Security Considerations
+
+- UDP is a connectionless protocol, so delivery is not guaranteed  
+- Firewall settings may restrict port access  
+- Check your network security policy before use  
+
+## 🐛 Troubleshooting
+
+### Connection failed
+- Verify server IP and ports  
+- Check firewall settings  
+- Ensure network connectivity  
+
+### No receive confirmation
+- Ensure target server is listening for UDP packets  
+- Check if the port numbers are correct  
+- Consider potential network latency  
+
+### Build error
+- Verify that .NET 6.0 SDK is installed  
+- Check for corrupted project files  
+
+## 📝 License
+
+This project is distributed under the MIT License.  
+See the [LICENSE](LICENSE) file for details.
+
+⭐ If this project was helpful, please give it a star!
+
