@@ -33,9 +33,7 @@ cd UDPMultiSender
 
 # Build project
 dotnet build
-
-# Run
-dotnet run
+```
 
 📖 Usage
 1. Server connection setup
