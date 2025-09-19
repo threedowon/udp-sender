@@ -37,10 +37,6 @@ dotnet build
 dotnet run
 ```
 
-### 2. 실행 파일 다운로드
-
-[Releases](https://github.com/threedowon/UDPMultiSender/releases) 페이지에서 최신 버전을 다운로드하여 실행하세요.
-
 ## 📖 사용법
 
 ### 1. 서버 연결 설정
